@@ -1,0 +1,23 @@
+# Phase 1: Learning configuration
+experiment:
+  name: "fl_learning_phase1"
+  description: "Building understanding of heterogeneous FL"
+  phase: "foundation"
+
+# Start with simple setup
+data:
+  dataset: "cifar10"
+  num_clients: 4
+  non_iid_alpha: 0.5
+
+model:
+  num_classes: 10
+  
+training:
+  num_rounds: 10  # Short for testing
+  local_epochs: 1
+
+# Research questions to investigate
+research_questions:
+  focus: "understanding dropout behavior"
+  questions: ["Q1", "Q2", "Q3", "Q4"]
