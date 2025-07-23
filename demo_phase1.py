@@ -89,6 +89,21 @@ def demonstrate_models():
     
     return True
 
+
+# At the end of demo_phase1.py, add:
+def run_visualizations():
+    """Generate Phase 1 plots"""
+    try:
+        from phase1_visualization import plot_model_comparison, plot_aggregation_concept
+        print("\n📊 Generating visualizations...")
+        plot_model_comparison()
+        plot_aggregation_concept()
+        return True
+    except ImportError:
+        print("⚠️ Matplotlib not available - skipping plots")
+        return False
+
+# In the main section:
 if __name__ == "__main__":
     print("🚀 Phase 1 Demonstration")
     print("Heterogeneous Federated Learning POC")
@@ -105,6 +120,8 @@ if __name__ == "__main__":
         print("✅ Device-specific models implemented")
         print("✅ Core FL components integrated")
         print("\nReady for Phase 2: Baseline Implementation")
+
+        run_visualizations()
         
     except Exception as e:
         print(f"❌ Demo failed: {e}")

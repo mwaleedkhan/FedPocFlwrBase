@@ -44,3 +44,6 @@ uvicorn>=0.22.0
 # System utilities
 psutil>=5.9.0
 humanfriendly>=10.0
+
+matplotlib>=3.5.0
+seaborn>=0.12.0
